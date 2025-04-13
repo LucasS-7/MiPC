@@ -13,41 +13,7 @@ public class Entradas {
     System.out.println("3-BUSQUEDA ENTRADA");
     System.out.println("4-ELIMINAR ENTRADA");
     System.out.println("5-SALIR DEL PROGRAMA");
-    } 
-    public static void MostrarPromociones(){
-    System.out.println("**************PROMOCIONES*************");
-    System.out.println("SI ERES ESTUDIANTE, TIENES UN 10% DE DESCUENTO");
-    System.out.println("SI ERES ADULTO MAYOR, TIENES UN 15% DE DESCUENTO");
-    System.out.println("**************************************");
-    }
-    public static void MostrarEntrada(){
-                if(contadorEntrada>=1){
-                valorTotal = valorEntrada-(valorEntrada*descuento);
-                System.out.println("***************************************");
-                System.out.println("Su asiento se encuentra en la Zona: "+zonaEntrada);
-                System.out.println("Precio Base Entrada: $"+ (int)valorEntrada);
-                System.out.println("Descuento aplicado de: %"+(int)(100*descuento));
-                System.out.println("Precio final a pagar: $"+ (int)valorTotal);
-                System.out.println("***************************************");
-                }
-                else {System.out.println("PARA ESTA OPCION DEBE COMPRAR UNA ENTRADA PRIMERO");
-                System.out.println("***************************************");}}
-    public static void EliminarEntrada(){
-                Scanner scanner = new Scanner(System.in);
-                if(contadorEntrada>=1){
-                System.out.println("DESEA ELIMINAR SU ENTRADA? (1-SI/2-NO)");
-                int eliminarEntrada = scanner.nextInt();
-                
-                if (eliminarEntrada==1){System.out.println("ENTRADA ELIMINADA!");contadorEntrada--;} //OPCION 1: ELIMINAR ENTRADA
-                else if (eliminarEntrada==2){System.out.println("ENTRADA CONSERVADA");}              //OPCION 2: NO ELIMINAR, SE CONSERVA
-                else {System.out.println("DEBE INGRESAR UNA OPCION VALIDA");}
-                }
-                else {System.out.println("PARA ESTA OPCION DEBE COMPRAR UNA ENTRADA PRIMERO");
-                System.out.println      ("***************************************");}
-    
-    
-    
-    }
+    } // MENU
     public static void VentaEntrada(){
                     Scanner scanner = new Scanner(System.in);
                     System.out.println("SELECCIONE LA ENTRADA QUE DESEA COMPRAR: ");
@@ -69,7 +35,42 @@ public class Entradas {
         if(edad>=65){System.out.println("Eres ADULTO MAYOR, tienes un 15% de Dcto.");descuento = 0.15;}                            
         else if (edad>9  && edad<26){System.out.println ("Eres ESTUDIANTE, tienes un 10% de Dcto.");descuento=0.10;}
         else {System.out.println("Lo siento, NO tienes descuentos aplicables");descuento=0;} contadorEntrada++;
-    }
+    } //OPCION 1
+    public static void MostrarPromociones(){
+    System.out.println("**************PROMOCIONES*************");
+    System.out.println("SI ERES ESTUDIANTE, TIENES UN 10% DE DESCUENTO");
+    System.out.println("SI ERES ADULTO MAYOR, TIENES UN 15% DE DESCUENTO");
+    System.out.println("**************************************");
+    } // OPCION 2
+    public static void MostrarEntrada(){
+                if(contadorEntrada>=1){
+                valorTotal = valorEntrada-(valorEntrada*descuento);
+                System.out.println("***************************************");
+                System.out.println("Su asiento se encuentra en la Zona: "+zonaEntrada);
+                System.out.println("Precio Base Entrada: $"+ (int)valorEntrada);
+                System.out.println("Descuento aplicado de: %"+(int)(100*descuento));
+                System.out.println("Precio final a pagar: $"+ (int)valorTotal);
+                System.out.println("***************************************");
+                }
+                else {System.out.println("PARA ESTA OPCION DEBE COMPRAR UNA ENTRADA PRIMERO");
+                System.out.println("***************************************");}} // OPCION 3
+    public static void EliminarEntrada(){
+                Scanner scanner = new Scanner(System.in);
+                if(contadorEntrada>=1){
+                System.out.println("DESEA ELIMINAR SU ENTRADA? (1-SI/2-NO)");
+                int eliminarEntrada = scanner.nextInt();
+                
+                if (eliminarEntrada==1){System.out.println("ENTRADA ELIMINADA!");contadorEntrada--;} //OPCION 1: ELIMINAR ENTRADA
+                else if (eliminarEntrada==2){System.out.println("ENTRADA CONSERVADA");}              //OPCION 2: NO ELIMINAR, SE CONSERVA
+                else {System.out.println("DEBE INGRESAR UNA OPCION VALIDA");}
+                }
+                else {System.out.println("PARA ESTA OPCION DEBE COMPRAR UNA ENTRADA PRIMERO");
+                System.out.println      ("***************************************");}
+    
+    
+    
+    } // OPCION 4
+    
     
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
