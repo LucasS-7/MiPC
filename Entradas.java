@@ -13,8 +13,8 @@ public class Entradas {
     System.out.println("3-BUSQUEDA ENTRADA");
     System.out.println("4-ELIMINAR ENTRADA");
     System.out.println("5-SALIR DEL PROGRAMA");
-    } // MENU
-    public static void VentaEntrada(){
+    } 
+    public static void VentaEntrada(){ 
                     Scanner scanner = new Scanner(System.in);
                     System.out.println("SELECCIONE LA ENTRADA QUE DESEA COMPRAR: ");
                     System.out.println("1-ENTRADA      VIP    || $15.000");
@@ -35,13 +35,13 @@ public class Entradas {
         if(edad>=65){System.out.println("Eres ADULTO MAYOR, tienes un 15% de Dcto.");descuento = 0.15;}                            
         else if (edad>9  && edad<26){System.out.println ("Eres ESTUDIANTE, tienes un 10% de Dcto.");descuento=0.10;}
         else {System.out.println("Lo siento, NO tienes descuentos aplicables");descuento=0;} contadorEntrada++;
-    } //OPCION 1
+    } 
     public static void MostrarPromociones(){
     System.out.println("**************PROMOCIONES*************");
     System.out.println("SI ERES ESTUDIANTE, TIENES UN 10% DE DESCUENTO");
     System.out.println("SI ERES ADULTO MAYOR, TIENES UN 15% DE DESCUENTO");
     System.out.println("**************************************");
-    } // OPCION 2
+    } 
     public static void MostrarEntrada(){
                 if(contadorEntrada>=1){
                 valorTotal = valorEntrada-(valorEntrada*descuento);
@@ -53,7 +53,7 @@ public class Entradas {
                 System.out.println("***************************************");
                 }
                 else {System.out.println("PARA ESTA OPCION DEBE COMPRAR UNA ENTRADA PRIMERO");
-                System.out.println("***************************************");}} // OPCION 3
+                System.out.println("***************************************");}} 
     public static void EliminarEntrada(){
                 Scanner scanner = new Scanner(System.in);
                 if(contadorEntrada>=1){
@@ -69,7 +69,7 @@ public class Entradas {
     
     
     
-    } // OPCION 4
+    } 
     
     
     public static void main(String[] args) {
@@ -87,9 +87,8 @@ public class Entradas {
         //OPCION 1: VENTA DE ENTRADA    
            case 1: 
                 Entradas.VentaEntrada();
-                break;
-         
-         //OPCION 2: PROMOCIONES 
+                break; 
+        //OPCION 2: PROMOCIONES 
             case 2:
                 Entradas.MostrarPromociones();
                 break;
